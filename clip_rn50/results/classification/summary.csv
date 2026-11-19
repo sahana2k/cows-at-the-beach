@@ -1,0 +1,4 @@
+variant,n,accuracy,ci95_low,ci95_high,macro_f1,data_path
+original,4050,0.9350617283950617,0.9271543209876543,0.9424691358024692,0.9350020075233869,/scratch/mbhat12/datasets/imagenet9/bg_challenge/original/val
+mixed_same,4050,0.8955555555555555,0.8871604938271604,0.905679012345679,0.8949929590090454,/scratch/mbhat12/datasets/imagenet9/bg_challenge/mixed_same/val
+mixed_rand,4050,0.8024691358024691,0.7906172839506173,0.8140740740740741,0.8016979956569894,/scratch/mbhat12/datasets/imagenet9/bg_challenge/mixed_rand/val

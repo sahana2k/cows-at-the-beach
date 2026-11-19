@@ -1,0 +1,21 @@
+# Datasets and downloaded models
+datasets/
+bg_challenge/
+cache/
+.huggingface/
+
+# Cluster output
+logs/
+slurm-*.out
+
+# Python-generated files
+__pycache__/
+*.pyc
+*.pyo
+
+# Archives and local files
+*.zip
+*.tar
+*.tar.gz
+.DS_Store
+.env
