@@ -1,0 +1,15 @@
+{
+  "split": "Testing",
+  "n_images": 2563,
+  "crop_mode": "floor",
+  "crop_mode_check": {
+    "floor": 1.8781141147883317e-05,
+    "round": 0.08115848759189248
+  },
+  "no_target_box": 1,
+  "target_fully_cropped_out": 31,
+  "survival_below_0.5": 129,
+  "median_survival": 0.9419159293174744,
+  "median_area_orig": 0.1887171916010498,
+  "median_area_crop": 0.24214763939380646
+}

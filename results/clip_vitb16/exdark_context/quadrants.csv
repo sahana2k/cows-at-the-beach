@@ -1,0 +1,5 @@
+quadrant,n,median_context_effect,context_needed,context_misled
+context_focused / correct,774,-0.03712749481201172,0.03875968992248062,0.0
+context_focused / incorrect,73,-1.3972129821777344,0.0,0.4520547945205479
+object_focused / correct,1265,-0.2018108367919922,0.08221343873517786,0.0
+object_focused / incorrect,419,-2.3643035888671875,0.0,0.6372315035799523

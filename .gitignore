@@ -1,0 +1,16 @@
+data/
+*.npz
+*.npy
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.tar.gz
+*.zip
+*.JPEG
+*.jpg
+slurm_*.out
+slurm_*.err
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store

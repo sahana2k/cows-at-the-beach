@@ -1,0 +1,1 @@
+Errors naming another annotated object (n=241 with both boxes in view): median OAL of pred-class map on PREDICTED object boxes = 1.35 vs on TARGET boxes = 0.95 (Wilcoxon p=5.69e-12); map favours the predicted object in 67% of these errors

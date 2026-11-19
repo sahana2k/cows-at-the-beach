@@ -1,0 +1,48 @@
+Accuracy by condition (usable test images, n=2531):
+  full         80.6%
+  obj_only     87.1%
+  obj_crop     88.5%
+  no_target    29.3%
+  no_objects   29.4%
+
+Categories (full vs obj_only blur):
+category
+object_sufficient    0.753
+context_misled       0.119
+both_fail            0.076
+context_needed       0.053
+
+Categories (full vs obj_crop) - robustness check:
+category_crop
+object_sufficient    0.781
+context_misled       0.104
+both_fail            0.091
+context_needed       0.024
+
+Median context_effect (margin full - obj_only): -0.286   (>0 = context helps on average)
+
+Per class:
+                n  acc_full  acc_obj_only  acc_obj_crop  acc_no_target  context_needed  context_misled  median_context_effect
+ground_truth                                                                                                                 
+Cup           114     0.518         0.789         0.781          0.158           0.026           0.298                 -1.785
+Bottle        143     0.559         0.825         0.790          0.196           0.028           0.294                 -2.966
+Chair         241     0.568         0.863         0.739          0.237           0.021           0.315                 -1.821
+Table         102     0.598         0.716         0.696          0.127           0.147           0.265                 -0.273
+Motorbike     103     0.777         0.777         0.854          0.097           0.126           0.126                 -0.062
+People        207     0.783         0.937         0.816          0.604           0.010           0.164                 -0.532
+Bicycle       248     0.794         0.786         0.911          0.036           0.085           0.077                  0.044
+Dog           396     0.874         0.859         0.932          0.136           0.056           0.040                 -0.032
+Car           237     0.882         0.945         0.916          0.489           0.030           0.093                 -0.661
+Cat           334     0.931         0.934         0.946          0.213           0.027           0.030                 -0.036
+Bus           127     0.953         0.969         0.976          0.173           0.024           0.039                 -0.181
+Boat          279     0.989         0.889         1.000          0.781           0.108           0.007                  0.333
+
+Spearman(OAL_target, context_effect) = -0.193 (p=1.4e-22); expect NEGATIVE if OAL is meaningful: low object focus <-> removing context hurts more
+
+Attribution x outcome quadrants:
+                                n  median_context_effect  context_needed  context_misled
+quadrant                                                                                
+context_focused / correct     774                 -0.037           0.039           0.000
+context_focused / incorrect    73                 -1.397           0.000           0.452
+object_focused / correct     1265                 -0.202           0.082           0.000
+object_focused / incorrect    419                 -2.364           0.000           0.637

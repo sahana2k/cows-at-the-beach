@@ -1,0 +1,48 @@
+y ~ log_oal
+  log_oal coef=-0.509 [-0.613, -0.404]  p=1.48e-21  OR per e-fold OAL=0.601  pseudo-R2=0.037  n=2531
+
+y ~ log_oal + log_area
+  log_oal coef=-0.027 [-0.141, 0.088]  p=6.49e-01  OR per e-fold OAL=0.974  pseudo-R2=0.136  n=2531
+
+y ~ log_oal + log_area + C(ground_truth)
+  log_oal coef=0.105 [-0.043, 0.254]  p=1.65e-01  OR per e-fold OAL=1.111  pseudo-R2=0.276  n=2531
+
+y ~ log_oal + log_area + C(ground_truth) + C(lighting)
+  log_oal coef=0.116 [-0.037, 0.270]  p=1.38e-01  OR per e-fold OAL=1.123  pseudo-R2=0.289  n=2531
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                 2531
+Model:                          Logit   Df Residuals:                     2508
+Method:                           MLE   Df Model:                           22
+Date:                Tue, 17 Nov 2026   Pseudo R-squ.:                  0.2887
+Time:                        18:03:22   Log-Likelihood:                -886.67
+converged:                       True   LL-Null:                       -1246.6
+Covariance Type:            nonrobust   LLR p-value:                5.078e-138
+================================================================================================
+                                   coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------
+Intercept                        3.7356      0.249     14.978      0.000       3.247       4.224
+C(ground_truth)[T.Boat]          3.1528      0.629      5.012      0.000       1.920       4.386
+C(ground_truth)[T.Bottle]       -1.1261      0.277     -4.071      0.000      -1.668      -0.584
+C(ground_truth)[T.Bus]           1.4980      0.470      3.189      0.001       0.577       2.419
+C(ground_truth)[T.Car]           0.6872      0.276      2.491      0.013       0.146       1.228
+C(ground_truth)[T.Cat]           0.6570      0.312      2.103      0.035       0.045       1.269
+C(ground_truth)[T.Chair]        -1.8084      0.248     -7.289      0.000      -2.295      -1.322
+C(ground_truth)[T.Cup]          -1.6908      0.296     -5.721      0.000      -2.270      -1.112
+C(ground_truth)[T.Dog]           0.1406      0.257      0.547      0.584      -0.363       0.644
+C(ground_truth)[T.Motorbike]    -0.3650      0.315     -1.160      0.246      -0.982       0.252
+C(ground_truth)[T.People]        0.0373      0.275      0.136      0.892      -0.501       0.576
+C(ground_truth)[T.Table]        -1.5607      0.292     -5.336      0.000      -2.134      -0.987
+C(lighting)[T.Low]              -0.1835      0.317     -0.579      0.562      -0.804       0.437
+C(lighting)[T.Object]           -0.5209      0.265     -1.963      0.050      -1.041      -0.001
+C(lighting)[T.Screen]           -0.9664      0.457     -2.116      0.034      -1.861      -0.071
+C(lighting)[T.Shadow]           -0.1223      0.749     -0.163      0.870      -1.590       1.345
+C(lighting)[T.Single]           -0.1692      0.206     -0.822      0.411      -0.572       0.234
+C(lighting)[T.Strong]           -0.7938      0.193     -4.120      0.000      -1.171      -0.416
+C(lighting)[T.Twilight]         -0.2534      0.404     -0.627      0.530      -1.045       0.538
+C(lighting)[T.Weak]             -0.8293      0.215     -3.856      0.000      -1.251      -0.408
+C(lighting)[T.Window]            0.1290      0.274      0.472      0.637      -0.407       0.665
+log_oal                          0.1163      0.078      1.484      0.138      -0.037       0.270
+log_area                         0.9721      0.071     13.617      0.000       0.832       1.112
+================================================================================================
