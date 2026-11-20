@@ -1,0 +1,52 @@
+y ~ log_oal
+  log_oal coef=-0.366 [-0.521, -0.211]  p=3.60e-06  OR per e-fold OAL=0.693  pseudo-R2=0.009  n=2531
+
+y ~ log_oal + log_area
+  log_oal coef=1.420 [1.128, 1.712]  p=1.54e-21  OR per e-fold OAL=4.137  pseudo-R2=0.141  n=2531
+
+y ~ log_oal + log_area + C(ground_truth)
+  log_oal coef=1.620 [1.273, 1.967]  p=5.24e-20  OR per e-fold OAL=5.054  pseudo-R2=0.293  n=2531
+
+y ~ log_oal + log_area + C(ground_truth) + C(lighting)
+  log_oal coef=1.636 [1.282, 1.989]  p=1.19e-19  OR per e-fold OAL=5.132  pseudo-R2=0.298  n=2531
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                 2531
+Model:                          Logit   Df Residuals:                     2508
+Method:                           MLE   Df Model:                           22
+Date:                Thu, 19 Nov 2026   Pseudo R-squ.:                  0.2977
+Time:                        23:59:50   Log-Likelihood:                -789.72
+converged:                      False   LL-Null:                       -1124.4
+Covariance Type:            nonrobust   LLR p-value:                2.231e-127
+================================================================================================
+                                   coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------
+Intercept                        5.3918      0.350     15.416      0.000       4.706       6.077
+C(ground_truth)[T.Boat]         23.5047   2.65e+04      0.001      0.999   -5.19e+04     5.2e+04
+C(ground_truth)[T.Bottle]       -2.0099      0.343     -5.861      0.000      -2.682      -1.338
+C(ground_truth)[T.Bus]           1.0030      0.648      1.549      0.121      -0.266       2.272
+C(ground_truth)[T.Car]           0.5749      0.470      1.223      0.221      -0.347       1.496
+C(ground_truth)[T.Cat]          -0.6633      0.353     -1.877      0.060      -1.356       0.029
+C(ground_truth)[T.Chair]        -1.8466      0.320     -5.774      0.000      -2.473      -1.220
+C(ground_truth)[T.Cup]          -2.9699      0.358     -8.292      0.000      -3.672      -2.268
+C(ground_truth)[T.Dog]          -1.8088      0.320     -5.659      0.000      -2.435      -1.182
+C(ground_truth)[T.Motorbike]    -1.5779      0.379     -4.167      0.000      -2.320      -0.836
+C(ground_truth)[T.People]       -1.4386      0.318     -4.520      0.000      -2.062      -0.815
+C(ground_truth)[T.Table]        -2.6764      0.357     -7.502      0.000      -3.376      -1.977
+C(lighting)[T.Low]              -0.3373      0.298     -1.131      0.258      -0.922       0.247
+C(lighting)[T.Object]           -0.3430      0.281     -1.219      0.223      -0.895       0.209
+C(lighting)[T.Screen]           -0.2783      0.474     -0.587      0.558      -1.208       0.652
+C(lighting)[T.Shadow]            1.2920      1.172      1.102      0.270      -1.005       3.589
+C(lighting)[T.Single]           -0.1508      0.211     -0.714      0.475      -0.565       0.263
+C(lighting)[T.Strong]           -0.3925      0.212     -1.854      0.064      -0.807       0.022
+C(lighting)[T.Twilight]         -0.1498      0.467     -0.321      0.749      -1.066       0.766
+C(lighting)[T.Weak]             -0.4618      0.233     -1.981      0.048      -0.919      -0.005
+C(lighting)[T.Window]            0.1193      0.286      0.417      0.677      -0.442       0.680
+log_oal                          1.6355      0.180      9.070      0.000       1.282       1.989
+log_area                         1.4604      0.112     13.081      0.000       1.242       1.679
+================================================================================================
+
+Possibly complete quasi-separation: A fraction 0.11 of observations can be
+perfectly predicted. This might indicate that there is complete
+quasi-separation. In this case some parameters will not be identified.
